@@ -8,7 +8,7 @@ hardware:
 configuration:
   timeout:
     description:  "Time allowed to complete the Operation."
-    default:      19
+    default:      28
 
 metrics:
   elapsed_time:
@@ -16,8 +16,19 @@ metrics:
     values:
       - units:      Seconds
         threshold:  maximum
-        default:    28
+        default:    12
 
       - units:      Seconds
         threshold:  minimum
         default:    3
+
+  errors:
+    description:    "Number and length of errors allowed."
+    values:
+      - units:      Count
+        threshold:  maximum
+        default:    2
+
+      - units:      Total milliseconds
+        threshold:  maximum
+        default:    500
