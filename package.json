@@ -1,0 +1,34 @@
+{
+  "name": "operation_operation_operation",
+  "version": "0.1.0",
+  "description": "Demo plugin for XLMS",
+  "main": "operation.js",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify operation.js -o bundle.js"
+  },
+  "author": "riggs",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
+  }
+}
