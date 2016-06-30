@@ -1,0 +1,23 @@
+--- # Operation
+interface: operation.html
+
+hardware:
+  - vendorID: 1003
+    deviceID: 8256
+
+configuration:
+  timeout:
+    description:  "Time allowed to complete the Operation."
+    default:      19
+
+metrics:
+  elapsed_time:
+    description:    "Time taken to complete the Operation; minimum value to prevent cheating."
+    values:
+      - units:      Seconds
+        threshold:  maximum
+        default:    28
+
+      - units:      Seconds
+        threshold:  minimum
+        default:    3
