@@ -34,6 +34,7 @@ function color (r, g, b, a=1) {
 }
 
 const GREEN = color(0, 0x80, 0);
+const BLUE = color(0x00, 0x44, 0xFF);
 const RED = color(0xFF, 0, 0);
 const BLACK = color(0, 0, 0);
 
@@ -86,7 +87,7 @@ let Display = {
     let decay = 0.98;
     function fade() {
       Display.fader(shape, decay);
-      decay -= 0.0012
+      decay -= 0.0014
     }
     let interval_ID = setInterval(fade, 100);
     //setTimeout(() => { decay -= 0.05 }, 2000);
@@ -97,22 +98,22 @@ let Display = {
     }, 6000);
   },
   smiley: () => {
-    let circle = Display.circle(154, 285, 30, GREEN);
+    let circle = Display.circle(154, 285, 30, BLUE);
     Display.flash(circle);
     return circle;
   },
   toilet: () => {
-    let circle = Display.circle(256, 386, 30, GREEN);
+    let circle = Display.circle(256, 386, 30, BLUE);
     Display.flash(circle);
     return circle;
   },
   skull: () => {
-    let circle = Display.circle(350, 537, 30, GREEN);
+    let circle = Display.circle(350, 537, 30, BLUE);
     Display.flash(circle);
     return circle;
   },
   dog: () => {
-    let circle = Display.circle(144, 696, 30, GREEN);
+    let circle = Display.circle(144, 696, 30, BLUE);
     Display.flash(circle);
     return circle;
   },
