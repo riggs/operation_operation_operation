@@ -1,0 +1,10 @@
+#image{
+    float: left;
+    position: absolute;
+    z-index: 1;
+}
+
+#display{
+    position: relative;
+    z-index: 2;
+}

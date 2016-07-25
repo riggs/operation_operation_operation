@@ -23,7 +23,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify operation.js -o bundle.js",
-    "deploy": "npm run build && zip -qr operation.zip config.yaml operation.html bundle.js assets"
+    "deploy": "npm run build && zip -qr operation.zip config.yaml operation.html bundle.js style.css assets"
   },
   "author": "riggs",
   "license": "ISC",

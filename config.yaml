@@ -12,23 +12,26 @@ configuration:
 
 metrics:
   elapsed_time:
-    description:    "Time taken to complete the Operation; minimum value to prevent cheating."
+    description:    "Time taken to complete the Operation; minimum value is best possible score."
     values:
-      - units:      Seconds
+      - unit:      Seconds
         threshold:  maximum
         default:    12
 
-      - units:      Seconds
+      - unit:      Seconds
         threshold:  minimum
-        default:    3
+        default:    4
 
-  errors:
-    description:    "Number and length of errors allowed."
+  error_count:
+    description:    "Number of errors allowed."
     values:
-      - units:      Count
+      - unit:      Count
         threshold:  maximum
         default:    2
 
-      - units:      Total milliseconds
+  error_length:
+    description:    "Total length of errors allowed."
+    values:
+      - unit:      Total milliseconds
         threshold:  maximum
         default:    500
